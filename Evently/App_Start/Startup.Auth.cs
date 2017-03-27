@@ -63,6 +63,18 @@ namespace Evently
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            //facebook auth stuff
+            app.UseFacebookAuthentication(
+               appId: "658388317699964",
+               appSecret: "efe67aacc714407529231b38460cfa74");
+
+            // google OAuth login stuff
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "167238726150-fm9cnbln71brb3ebrq5e78ltdf5k4fc5.apps.googleusercontent.com",
+                ClientSecret = "QJCj2F6RYH_bdp6Tw-oQu_ql"
+            });
         }
     }
 }
