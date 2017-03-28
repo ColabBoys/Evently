@@ -19,10 +19,6 @@ namespace Evently.Models
         [Required]
         public byte GenreId { get; set; }
 
-        public DateTime DateAdded
-        {
-            get { return DateAdded = DateTime.Today; }
-            set { DateAdded = value; }
-        }
+        public DateTime DateAdded{ get ; set ;}
     }
 }
