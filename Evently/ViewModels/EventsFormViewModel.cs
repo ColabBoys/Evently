@@ -10,6 +10,7 @@ namespace Evently.ViewModels
     public class EventsFormViewModel
     {
         public IEnumerable<Genre> Genres { get; set; }
+        public IEnumerable<EventType> EventTypes { get; set; }
         public int? Id { get; set; }
         public int? OwnerId { get; set; }
         [Required]
@@ -50,6 +51,9 @@ namespace Evently.ViewModels
             Id = events.Id;
             Name = events.Name;
             GenreId = events.GenreId;
+            EventTypeId = events.EventTypeId;
+            DateAdded = events.DateAdded;
+            EventDate = events.EventDate;
         }
     }
 }

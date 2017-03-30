@@ -33,10 +33,13 @@ namespace Evently.Controllers
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
+            var types = _context.EventTypes.ToList();
 
             var viewModel = new EventsFormViewModel
             {
-                Genres = genres
+                Genres = genres,
+                EventTypes = types
+                
             };
             
             return View("EventForm", viewModel);

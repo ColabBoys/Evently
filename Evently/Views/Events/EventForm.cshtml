@@ -26,6 +26,12 @@
         @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Below Types", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.GenreId)
     </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EventTypeId)
+        @* textboxfor has a few overloads and as a second string you can pass a format string for the date in this instance*@
+        @Html.DropDownListFor(m => m.EventTypeId, new SelectList(Model.EventTypes, "Id", "Name"), "Select Below Types", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EventTypeId)
+    </div>
     @Html.HiddenFor(m => m.Id)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
