@@ -93,6 +93,7 @@ namespace Evently.Controllers
             }
             else
             {
+                // add stuff
                 var eventInDb = _context.Events.Single(m => m.Id == events.Id);
                 eventInDb.GenreId = events.GenreId;
                 // doesnt apply for edit movieInDb.DateAdded = movie.DateAdded;
