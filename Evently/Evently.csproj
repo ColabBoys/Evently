@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201703301518310_PopulateEventTypes.Designer.cs">
       <DependentUpon>201703301518310_PopulateEventTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703301525250_AddEventTypeToEvent.cs" />
+    <Compile Include="Migrations\201703301525250_AddEventTypeToEvent.Designer.cs">
+      <DependentUpon>201703301525250_AddEventTypeToEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -482,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703301518310_PopulateEventTypes.resx">
       <DependentUpon>201703301518310_PopulateEventTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703301525250_AddEventTypeToEvent.resx">
+      <DependentUpon>201703301525250_AddEventTypeToEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
