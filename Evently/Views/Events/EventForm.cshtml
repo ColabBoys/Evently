@@ -16,15 +16,15 @@
         @Html.ValidationMessageFor(m => m.Name)
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.EventDate)
+        @Html.TextBoxFor(m => m.EventDate, new { @class = "form-control", @Value = "01 Jan 2000" })
+        @Html.ValidationMessageFor(m => m.EventDate)
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => m.GenreId)
         @* textboxfor has a few overloads and as a second string you can pass a format string for the date in this instance*@
         @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Below Types", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.GenreId)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.DateAdded)
-        @Html.TextBoxFor(m => m.DateAdded, new { @class = "form-control", @Value = "01 Jan 2000" })
-        @Html.ValidationMessageFor(m => m.DateAdded)
     </div>
     @Html.HiddenFor(m => m.Id)
     @Html.AntiForgeryToken()

@@ -29,6 +29,7 @@ namespace Evently.Controllers
             return View();
         }
 
+        [Authorize]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
@@ -41,6 +42,7 @@ namespace Evently.Controllers
             return View("EventForm", viewModel);
         }
 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var events = _context.Events.SingleOrDefault(c => c.Id == id);
@@ -67,7 +69,7 @@ namespace Evently.Controllers
             }
             return View(movie);
         }
-
+        [Authorize]
         public ActionResult Save(Event events)
         {
             if (!ModelState.IsValid)
@@ -82,8 +84,11 @@ namespace Evently.Controllers
 
             if (events.Id == 0)
             {
+                string currentUserId = User.Identity.GetUserId();
+                ApplicationUser currentUser = _context.Users.FirstOrDefault(x => x.Id == currentUserId);
+
                 events.DateAdded = DateTime.Now;
-                events.OwnerId = User.Identity.GetUserId();
+                events.OwnerId = currentUserId; //User.Identity.GetUserId();
                 _context.Events.Add(events);
             }
             else

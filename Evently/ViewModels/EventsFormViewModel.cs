@@ -19,9 +19,17 @@ namespace Evently.ViewModels
         [Display(Name = "Genre")]
         [Required]
         public byte? GenreId { get; set; }
+        
+        [Display(Name = "Type")]
+        [Required]
+        public byte? EventTypeId { get; set; }
 
         [Required]
         public DateTime DateAdded { get; set; }
+
+        [Display(Name = "When its going down")]
+        [Required]
+        public DateTime EventDate { get; set; }
 
 
         public string Title

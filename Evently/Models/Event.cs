@@ -19,6 +19,14 @@ namespace Evently.Models
         [Required]
         public byte GenreId { get; set; }
 
+        public EventType EventType { get; set; }
+        [Display(Name = "Type")]
+        [Required]
+        public byte EventTypeId { get; set; }
+
         public DateTime DateAdded{ get ; set ;}
+        [Display(Name = "When its going down")]
+        [Required]
+        public DateTime EventDate { get; set; }
     }
 }

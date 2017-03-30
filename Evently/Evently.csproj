@@ -199,8 +199,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703301515570_AddDateToEventAndAddEventType.cs" />
+    <Compile Include="Migrations\201703301515570_AddDateToEventAndAddEventType.Designer.cs">
+      <DependentUpon>201703301515570_AddDateToEventAndAddEventType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703301518310_PopulateEventTypes.cs" />
+    <Compile Include="Migrations\201703301518310_PopulateEventTypes.Designer.cs">
+      <DependentUpon>201703301518310_PopulateEventTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -453,6 +463,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Events\EventForm.cshtml" />
     <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -464,6 +475,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703301515570_AddDateToEventAndAddEventType.resx">
+      <DependentUpon>201703301515570_AddDateToEventAndAddEventType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703301518310_PopulateEventTypes.resx">
+      <DependentUpon>201703301518310_PopulateEventTypes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
