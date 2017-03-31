@@ -64,6 +64,9 @@ namespace Evently.Models
 
     public class RegisterViewModel
     {
+        [Display(Name = "Profile Picture")]
+        public byte[] UserPhoto { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

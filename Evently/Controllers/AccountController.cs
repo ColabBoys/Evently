@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -151,7 +152,35 @@ namespace Evently.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                // To convert the user uploaded Photo as Byte Array before save to DB
+                byte[] imageData = null;
+                if (Request.Files.Count > 0)
+
+                {
+
+                    HttpPostedFileBase poImgFile = Request.Files["UserPhoto"];
+
+
+
+                    using (var binary = new BinaryReader(poImgFile.InputStream))
+
+                    {
+
+                        imageData = binary.ReadBytes(poImgFile.ContentLength);
+
+                    }
+
+                }
+
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email
+                };
+
+                //Here we pass the byte array to user context to store in db
+                user.UserPhoto = imageData;
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

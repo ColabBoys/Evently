@@ -25,8 +25,12 @@ namespace Evently.Models
         public byte EventTypeId { get; set; }
 
         public DateTime DateAdded{ get ; set ;}
-        [Display(Name = "When its going down")]
+        [Display(Name = "When?")]
         [Required]
         public DateTime EventDate { get; set; }
+
+        [Required]
+        [Display(Name ="Where?")]
+        public string Address { get; set; }
     }
 }

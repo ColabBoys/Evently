@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201703301525250_AddEventTypeToEvent.Designer.cs">
       <DependentUpon>201703301525250_AddEventTypeToEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703311320349_updateDataViewModelAndProfilePic.cs" />
+    <Compile Include="Migrations\201703311320349_updateDataViewModelAndProfilePic.Designer.cs">
+      <DependentUpon>201703311320349_updateDataViewModelAndProfilePic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -471,6 +475,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -489,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703301525250_AddEventTypeToEvent.resx">
       <DependentUpon>201703301525250_AddEventTypeToEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311320349_updateDataViewModelAndProfilePic.resx">
+      <DependentUpon>201703311320349_updateDataViewModelAndProfilePic.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
